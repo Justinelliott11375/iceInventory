@@ -2,7 +2,7 @@
   "development": {
     "username": "postgres",
     "password": null,
-    "database": "NBADev",
+    "database": "inventory-dev",
     "host": "127.0.0.1",
     "dialect": "postgres",
     "logging": false,
@@ -11,7 +11,7 @@
   "test": {
     "username": "postgres",
     "password": null,
-    "database": "NBATest",
+    "database": "inventory-test",
     "host": "127.0.0.1",
     "dialect": "postgres",
     "logging": false,
@@ -20,9 +20,9 @@
   "production": {
     "username": "postgres",
     "password": null,
-    "database": "NBAProd",
+    "database": "inventory-pro",
     "host": "127.0.0.1",
-    "dialect": "mysql",
+    "dialect": "postgres",
     "logging": false,
     "operatorsAliases": false
   }

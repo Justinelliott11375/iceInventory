@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../static/partials/head.ejs %>
+</head>
+
+<body>
+    <main class="container">
+        <% include ../static/partials/navbar.ejs %>
+
+        <h1>Reports</h1>
+
+        <ul class="list-group">
+            <% reports.forEach((report) => { %>
+            <li class="list-group-item">
+                <a href="/reports/<%= report.id %>"> <%= report.date %> </a>
+            </li>
+            <% }) %>
+        </ul>
+
+    </main>
+</body>
+
+</html>
