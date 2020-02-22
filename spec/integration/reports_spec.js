@@ -79,12 +79,67 @@ describe('routes: reports', () => {
         it('should render a view with the selected report', (done) => {
             request.get(`${base}${this.report.id}`, (err, res, body) => {
                 expect(err).toBeNull();
-                expect(body).toContain("currentDate");
+                expect(body).toContain(currentDate);
+                done();
+            });
+        });
+        
+    });
+
+    describe('POST /reports/:id/destroy', () => {
+        it('should delete the report with the associated ID', (done) => {
+            Report.findAll()
+            .then((reports) => {
+                const reportCountBeforeDelete = reports.length;
+
+                expect(reportCountBeforeDelete).toBe(1);
+
+                request.post(`${base}${this.report.id}/destroy`, (err, res, body) => {
+                    Report.findAll()
+                    .then((reports) => {
+                        expect(err).toBeNull();
+                        expect(reports.length).toBe(reportCountBeforeDelete - 1);
+                        done();
+                    });
+                });
             });
         });
         
     });
     
+    describe('GET /reports/:id/edit', () => {
+        
+        it('should render a view with an edit report form', (done) => {
+            request.get(`${base}${this.report.id}/edit`, (err, res, body) => {
+                expect(err).toBeNull();
+                expect(body).toContain(currentDate);
+                done();
+            })
+        });
+        
+    });
+
+    describe('POST /reports/:id/update', () => {
+        
+        it('should update the report with given values', (done) => {
+            const updateDate = new Date();
+            const options = {
+                url: `${base}${this.report.id}/update`,
+                form: {
+                    date: updateDate
+                }
+            }
+            request.post(options, (err, res, body) => {
+                expect(err).toBeNull();
     
-    
+                Report.findOne({
+                    where: { id: this.report.id }
+                })
+                .then((report) => {
+                    expect(err).toBeNull();
+                    done();
+                })
+            })
+        });    
+    })
 });

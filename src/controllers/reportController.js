@@ -38,6 +38,37 @@ module.exports = {
                 res.render("reports/show", {report});
             }
         })
+    },
+
+    destroy(req, res, next){
+        reportQueries.deleteReport(req.params.id, (err, report) => {
+            if(err){
+                res.redirect(500, `/reports/${report.id}`)
+            } else {
+                res.redirect(303, "/reports")
+            }
+        });
+    },
+
+    edit(req, res, next){
+        reportQueries.getReport(req.params.id, (err, report) => {
+            if(err || report == null){
+                res.redirect(404, "/");
+            } else {
+                res.render("reports/edit", {report});
+            }
+        });
+    },
+
+    update(req, res, next){
+        console.log("report update from controller called");
+        reportQueries.updateReport(req.params.id, req.body, (err, report) => {
+            if(err || report == null){
+                res.redirect(404, `/reports/${req.params.id}/edit`);
+            } else {
+                res.redirect(`/reports/${report.id}`);
+            }
+        })
     }
     
 }

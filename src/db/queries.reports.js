@@ -27,12 +27,42 @@ module.exports = {
     },
 
     getReport(id, callback){
-        return Report.findById(id)
+        return Report.findByPk(id)
         .then((report) => {
             callback(null, report);
         })
         .catch((err) => {
             callback(err);
         })
+    },
+
+    deleteReport(id, callback){
+        return Report.destroy({
+            where: {id}
+        })
+        .then((report) => {
+            callback(null, report);
+        })
+        .catch((err) => {
+            callback(err);
+        })
+    },
+
+    updateReport(id, updatedReport, callback){
+        return Report.findByPk(id)
+        .then((report) => {
+            if(!report){
+                return callback("Report not found");
+            }
+            report.update(updatedReport, {
+                fields: Object.keys(updatedReport)
+            })
+            .then(() => {
+                callback(null, report);
+            })
+            .catch((err) => {
+                callback(err);
+            });
+        });
     }
 }
