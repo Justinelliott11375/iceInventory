@@ -30,7 +30,7 @@ describe('routes: reports', () => {
             request.get(base, (err, res, body) => {
                 expect(res.statusCode).toBe(200);
                 expect(err).toBeNull();
-                expect(body).toContain(currentDate);
+                expect(body).toContain(currentDate.toDateString());
                 done();
             })
         });
@@ -79,7 +79,7 @@ describe('routes: reports', () => {
         it('should render a view with the selected report', (done) => {
             request.get(`${base}${this.report.id}`, (err, res, body) => {
                 expect(err).toBeNull();
-                expect(body).toContain(currentDate);
+                expect(body).toContain(currentDate.toDateString());
                 done();
             });
         });
@@ -112,7 +112,7 @@ describe('routes: reports', () => {
         it('should render a view with an edit report form', (done) => {
             request.get(`${base}${this.report.id}/edit`, (err, res, body) => {
                 expect(err).toBeNull();
-                expect(body).toContain(currentDate);
+                expect(body).toContain(currentDate.toDateString());
                 done();
             })
         });
