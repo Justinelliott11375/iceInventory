@@ -5,8 +5,13 @@ const faker = require("faker");
 let reports = [];
 
 for(let i = 1; i <= 15; i++){
+  let newDate = new Date();
+  newDate.setHours(0,0,0,0);
+  newDate.setFullYear(2020);
+  newDate.setMonth(0);
+  newDate.setDate(i)
   reports.push({
-    date: faker.date.recent(),
+    date: newDate,
     createdAt: new Date(),
     updatedAt: new Date()
   })

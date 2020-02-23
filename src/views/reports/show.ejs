@@ -9,7 +9,7 @@
     <% include ../static/partials/navbar.ejs %>
 
     <main class="container">
-        <h1><%= report.date %></h1>
+        <h1><%= report.date.toDateString() %></h1>
         <a href="/reports/<%= report.id %>/edit" class="btn btn-warning">Edit</a>
 
         <form style="display:initial" action="/reports/<%= report.id %>/destroy" method="post">

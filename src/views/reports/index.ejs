@@ -14,7 +14,7 @@
         <ul class="list-group">
             <% reports.forEach((report) => { %>
             <li class="list-group-item">
-                <a href="/reports/<%= report.id %>"> <%= report.date %> </a>
+                <a href="/reports/<%= report.id %>"> <%= report.date.toDateString() %> </a>
             </li>
             <% }) %>
         </ul>
