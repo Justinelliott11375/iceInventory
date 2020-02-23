@@ -7,6 +7,7 @@ module.exports = {
         console.log(err);
         res.redirect(500, "static/index");
       } else {
+        console.log("GET reports index");
         res.render("reports/index", { reports });
       }
     });
