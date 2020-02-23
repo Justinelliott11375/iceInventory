@@ -1,5 +1,17 @@
 'use strict';
 
+const faker = require("faker");
+
+let reports = [];
+
+for(let i = 1; i <= 15; i++){
+  reports.push({
+    date: faker.date.recent(),
+    createdAt: new Date(),
+    updatedAt: new Date()
+  })
+}
+
 module.exports = {
   up: (queryInterface, Sequelize) => {
     /*
@@ -12,6 +24,7 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
+   return queryInterface.bulkInsert("Reports", reports, {})
   },
 
   down: (queryInterface, Sequelize) => {
@@ -22,5 +35,6 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('Person', null, {});
     */
+   return queryInterface.bulkDelete("Reports", null, {});
   }
 };
