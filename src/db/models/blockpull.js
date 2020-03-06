@@ -1,16 +1,21 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var BlockPull = sequelize.define('BlockPull', {
-    blocks: DataTypes.FLOAT,
-    days: DataTypes.FLOAT,
+    blocks: {
+      type:DataTypes.FLOAT,
+      allowNull: false
+    },
+    days: {
+      type: DataTypes.FLOAT,
+      allowNull: false
+    },
     reportId: {
       type: DataTypes.INTEGER,
-      onDelete: "CASCADE",
-      references: {
-        model: "Reports",
-        key: "id",
-        as: "reportId",
-      }
+      allowNull: false
+    },
+    blockNumber: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   }, {});
   BlockPull.associate = function(models) {

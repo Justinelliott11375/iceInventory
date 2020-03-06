@@ -64,6 +64,7 @@ describe('routes: reports', () => {
                     Report.findOne({where: {date: newReportDate}})
                     .then((report) => {
                         expect(res.statusCode).toBe(303);
+                        expect(report.date.toDateString()).toEqual(newReportDate.toDateString());
                         done();
                     })
                     .catch((err) => {

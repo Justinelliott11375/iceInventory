@@ -9,10 +9,12 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       blocks: {
-        type: Sequelize.FLOAT
+        type: Sequelize.FLOAT,
+        allowNull: false
       },
       days: {
-        type: Sequelize.FLOAT
+        type: Sequelize.FLOAT,
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
@@ -22,8 +24,13 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
+      blockNumber: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
       reportId: {
         type: Sequelize.INTEGER,
+        allowNull: false,
         onDelete: "CASCADE",
         references: {
           model: "Reports",
