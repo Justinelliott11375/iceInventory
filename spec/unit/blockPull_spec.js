@@ -18,7 +18,6 @@ describe('BlockPull', () => {
                 this.report = report;
 
                 BlockPull.create({
-                    blocks: 6,
                     days: 2,
                     blockNumber: '111A',
                     reportId: this.report.id
@@ -39,13 +38,12 @@ describe('BlockPull', () => {
 
         it('should create a blockPull object with blocks, days, and associated report', (done) => {
             BlockPull.create({
-                blocks: 5,
                 days: 3,
                 blockNumber: '111B',
                 reportId: this.report.id
             })
             .then((blockPull)  => {
-                expect(blockPull.blocks).toBe(5);
+                expect(blockPull.blockNumber).toBe('111B');
                 expect(blockPull.days).toBe(3);
                 done();
             })
@@ -57,9 +55,9 @@ describe('BlockPull', () => {
         
     });
 
-    it('should not create a blockPull with missing days, blocks, blockNumber, or reportId', (done) => {
+    it('should not create a blockPull with missing days, blockNumber, or reportId', (done) => {
         BlockPull.create({
-            blocks: 4
+            blockNumber: '123B',
         })
         .then((blockPull) => {
             // code should not execute because of validation error

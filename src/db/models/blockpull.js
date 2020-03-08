@@ -1,10 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var BlockPull = sequelize.define('BlockPull', {
-    blocks: {
-      type:DataTypes.FLOAT,
-      allowNull: false
-    },
     days: {
       type: DataTypes.FLOAT,
       allowNull: false
@@ -14,6 +10,10 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     blockNumber: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    machine: {
       type: DataTypes.STRING,
       allowNull: false
     }

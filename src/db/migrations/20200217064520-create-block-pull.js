@@ -8,10 +8,6 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      blocks: {
-        type: Sequelize.FLOAT,
-        allowNull: false
-      },
       days: {
         type: Sequelize.FLOAT,
         allowNull: false
@@ -27,6 +23,10 @@ module.exports = {
       blockNumber: {
         allowNull: false,
         type: Sequelize.STRING
+      },
+      machine: {
+        type: Sequelize.STRING,
+        allowNull: false
       },
       reportId: {
         type: Sequelize.INTEGER,
