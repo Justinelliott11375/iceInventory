@@ -40,6 +40,7 @@ module.exports = {
             callback(null, report);
         })
         .catch((err) => {
+            console.log(err);
             callback(err);
         })
     },
