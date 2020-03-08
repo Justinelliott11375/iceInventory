@@ -8,11 +8,9 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      blocks: {
-        type: Sequelize.FLOAT
-      },
       days: {
-        type: Sequelize.FLOAT
+        type: Sequelize.FLOAT,
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
@@ -22,8 +20,17 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
+      blockNumber: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      machine: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       reportId: {
         type: Sequelize.INTEGER,
+        allowNull: false,
         onDelete: "CASCADE",
         references: {
           model: "Reports",

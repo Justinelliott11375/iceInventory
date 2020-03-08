@@ -1,7 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var Report = sequelize.define('Report', {
-    date: DataTypes.DATE
+    date: {
+      type: DataTypes.DATE,
+      allowNull: false
+    }
   }, {});
   Report.associate = function(models) {
     // associations can be defined here

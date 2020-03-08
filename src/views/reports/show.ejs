@@ -15,6 +15,26 @@
         <form style="display:initial" action="/reports/<%= report.id %>/destroy" method="post">
             <button type="submit" class="btn btn-danger">Delete</button>
         </form>
+        <h1>Blocks Pulled</h1>
+        <a href="/reports/<%= report.id %>/blockPulls/new" class="btn btn-success">New Block Pull</a>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <% var blockCount = 0; 
+                report.blockPulls.forEach((blockPull) => { 
+                    blockCount += 1;
+                }) %>
+                Total Blocks Pulled:
+                <%= blockCount %>
+            </li>
+            <% report.blockPulls.forEach((blockPull) => { %>
+            <li class="list-group-item">
+                <p>Block Number: <%= blockPull.blockNumber %> days: <%= blockPull.days %> Machine:
+                    <%= blockPull.machine %>
+                </p>
+            </li>
+            <% }) %>
+        </ul>
+
     </main>
 
     <% include ../static/partials/baseScripts.ejs %>

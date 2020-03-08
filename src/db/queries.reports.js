@@ -1,4 +1,6 @@
 const Report = require("./models").Report;
+const BlockPull = require("./models").BlockPull;
+
 
 module.exports = {
     getAllReports(callback){
@@ -27,7 +29,13 @@ module.exports = {
     },
 
     getReport(id, callback){
-        return Report.findByPk(id)
+        return Report.findByPk(id, {
+            include: [{
+                model: BlockPull,
+                as: "blockPulls"
+            }]
+        })
+
         .then((report) => {
             callback(null, report);
         })
