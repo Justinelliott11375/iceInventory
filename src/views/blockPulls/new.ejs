@@ -1,64 +1,66 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <% include ../static/partials/head.ejs %>
-</head>
+  </head>
 
-<body>
+  <body>
     <% include ../static/partials/navbar.ejs %>
 
     <main class="container">
-        <h1>New Block Pull</h1>
-        <form action="/reports/<%= reportId %>/blockPulls/create" method="post">
-            <div class="form-group">
-                <label for="days">Block Days</label>
-                <select id="newBlockPullDays" name="days">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="machine">Machine</label>
-                <select id="newBlockPullMachine" name="machine">
-                    <option value="Clinebell 1(left)">Clinebell 1(left)</option>
-                    <option value="Clinebell 1(right)">Clinebell 1(right)</option>
-                    <option value="Clinebell 2(left)">Clinebell 2(left)</option>
-                    <option value="Clinebell 2(right)">Clinebell 2(right)</option>
-                    <option value="Clinebell 3(left)">Clinebell 3(left)</option>
-                    <option value="Clinebell 3(right)">Clinebell 3(right)</option>
-                    <option value="Clinebell 4(left)">Clinebell 4(left)</option>
-                    <option value="Clinebell 4(right)">Clinebell 4(right)</option>
-                    <option value="Clinebell 5(left)">Clinebell 5(left)</option>
-                    <option value="Clinebell 5(right)">Clinebell 5(right)</option>
-                    <option value="Clinebell 6(left)">Clinebell 6(left)</option>
-                    <option value="Clinebell 6(right)">Clinebell 6(right)</option>
-                    <option value="Clinebell 7(left)">Clinebell 7(left)</option>
-                    <option value="Clinebell 7(right)">Clinebell 7(right)</option>
-                    <option value="Clinebell 8(left)">Clinebell 8(left)</option>
-                    <option value="Clinebell 8(right)">Clinebell 8(right)</option>
-                    <option value="Clinebell 9(left)">Clinebell 9(left)</option>
-                    <option value="Clinebell 9(right)">Clinebell 9(right)</option>
-                    <option value="Bruce 1(left)">Bruce 1(left)</option>
-                    <option value="Bruce 1(right)">Bruce 1(right)</option>
-                    <option value="Bruce 2(left)">Bruce 2(left)</option>
-                    <option value="Bruce 2(right)">Bruce 2(right)</option>
-                    <option value="Bruce 3(left)">Bruce 3(left)</option>
-                    <option value="Bruce 3(right)">Bruce 3(right)</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="blockNumber">Block Number</label>
-                <textarea rows="1" class="form-control" name="blockNumber" placeholder="Enter block number"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+      <h1>New Block Pull</h1>
+      <form action="/reports/<%= reportId %>/blockPulls/create" method="post">
+        <div class="form-group">
+          <label for="days">Block Days</label>
+          <select id="newBlockPullDays" name="days">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="machine">Machine</label>
+          <select id="newBlockPullMachine" name="machine">
+            <option value="Bruce 1(left)">Bruce 1(left)</option>
+            <option value="Bruce 1(right)">Bruce 1(right)</option>
+            <option value="Bruce 2(left)">Bruce 2(left)</option>
+            <option value="Bruce 2(right)">Bruce 2(right)</option>
+            <option value="Bruce 3(left)">Bruce 3(left)</option>
+            <option value="Bruce 3(right)">Bruce 3(right)</option>
+            <option value="Bruce 4(left)">Bruce 4(left)</option>
+            <option value="Bruce 4(right)">Bruce 4(right)</option>
+            <option value="Bruce 5(left)">Bruce 5(left)</option>
+            <option value="Bruce 5(right)">Bruce 5(right)</option>
+            <option value="Bruce 6(left)">Bruce 6(left)</option>
+            <option value="Bruce 6(right)">Bruce 6(right)</option>
+            <option value="Bruce 7(left)">Bruce 7(left)</option>
+            <option value="Bruce 7(right)">Bruce 7(right)</option>
+            <option value="Bruce 8(left)">Bruce 8(left)</option>
+            <option value="Bruce 8(right)">Bruce 8(right)</option>
+            <option value="Bruce 9(left)">Bruce 9(left)</option>
+            <option value="Bruce 9(right)">Bruce 9(right)</option>
+            <option value="Clinebell 1(left)">Clinebell 1(left)</option>
+            <option value="Clinebell 1(right)">Clinebell 1(right)</option>
+            <option value="Clinebell 2(left)">Clinebell 2(left)</option>
+            <option value="Clinebell 2(right)">Clinebell 2(right)</option>
+            <option value="Clinebell 3(left)">Clinebell 3(left)</option>
+            <option value="Clinebell 3(right)">Clinebell 3(right)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="blockNumber">Block Number</label>
+          <textarea
+            rows="1"
+            class="form-control"
+            name="blockNumber"
+            placeholder="Enter block number"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </main>
 
     <% include ../static/partials/baseScripts.ejs %>
-
-</body>
-
+  </body>
 </html>
