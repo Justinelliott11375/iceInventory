@@ -14,5 +14,15 @@ module.exports = {
             //console.log(err);
             callback(err);
         })
-    }
+    },
+
+    getBlockPull(id, callback){
+        return BlockPull.findByPk(id)
+        .then((blockPull) => {
+          callback(null, blockPull);
+        })
+        .catch((err) => {
+          callback(err);
+        })
+      }
 }
