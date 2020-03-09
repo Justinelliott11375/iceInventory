@@ -21,5 +21,15 @@ module.exports = {
                 res.redirect(303, `/reports/${newBlockPull.reportId}`);
             }
         });
-    }
+    },
+
+    show(req, res, next){
+        blockPullQueries.getBlockPull(req.params.id, (err, blockPull) => {
+          if(err || blockPull == null){
+            res.redirect(404, "/");
+          } else {
+            res.render("blockPulls/show", {blockPull});
+          }
+        });
+      }
 };

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../static/partials/head.ejs %>
+</head>
+
+<body>
+    <% include ../static/partials/navbar.ejs %>
+
+    <main class="container">
+        <p><%= blockPull.blockNumber %></p>
+        <p><%= blockPull.days %></p>
+        <p><%= blockPull.machine %></p>
+    </main>
+
+    <% include ../static/partials/baseScripts.ejs %>
+
+</body>
+
+</html>
