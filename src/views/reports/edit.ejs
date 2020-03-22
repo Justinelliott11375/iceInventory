@@ -9,13 +9,25 @@
     <% include ../static/partials/navbar.ejs %>
 
     <main class="container">
-
+        <% var reportDateArray = [report.date.getFullYear().toString()]; 
+        if(report.date.getMonth() < 10){
+            reportDateArray[1] = ("0" + (report.date.getMonth() + 1).toString());
+        } else {
+            reportDateArray[1] = (report.date.getMonth() + 1).toString();
+        };
+        if(report.date.getDate() < 10) {
+            reportDateArray[2] = ("0" + report.date.getDate().toString());
+        } else {
+            reportDateArray[2] = report.date.getDate().toString();
+        }
+        console.log(reportDateArray);
+        var reportDateString = reportDateArray.join("-")
+        console.log(reportDateString) %>
         <h1>Edit Report for <%= report.date.toDateString() %></h1>
-
         <form action="/reports/<%= report.id %>/update" method="post">
             <div class="form-group">
                 <label for="date"> Report Date</label>
-                <input value="2020-01-01" type="date" name="date">
+                <input value="<%= reportDateString %>" type="date" name="date">
             </div>
             <button type="submit" class="btn btn-primary">Update</button>
         </form>

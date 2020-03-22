@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../static/partials/head.ejs %>
+</head>
+
+<body>
+    <% include ../static/partials/navbar.ejs %>
+
+    <main class="container">
+
+        <h1>Edit Post</h1>
+
+        <form action="/reports/<%= blockPull.reportId %>/blockPulls/<%= blockPull.id %>/update" method="post">
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="days">Block Days</label>
+                    <select id="newBlockPullDays" name="days">
+                        <% if(blockPull.days == 1){ %>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <% } else if(blockPull.days == 2){ %>
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <% } else if(blockPull.days == 3){ %>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" selected>3</option>
+                        <option value="4">4</option>
+                        <% } else if(blockPull.days == 4){ %>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <% } %>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="machine">Machine</label>
+                    <select id="newBlockPullMachine" name="machine">
+                        <!-- if/else statements render current machine as "selected" -->
+                        <% if(blockPull.machine == "Bruce 1(left)") { %>
+                            <option value="Bruce 1(left)" selected>Bruce 1(left)</option>
+                        <% } else { %>
+                        <option value="Bruce 1(left)">Bruce 1(left)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Bruce 1(right)") { %>
+                            <option value="Bruce 1(right)" selected>Bruce 1(right)</option>
+                        <% } else { %>
+                        <option value="Bruce 1(right)">Bruce 1(right)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Bruce 2(left)") { %>
+                            <option value="Bruce 2(left)" selected>Bruce 2(left)</option>
+                        <% } else { %>
+                        <option value="Bruce 2(left)">Bruce 2(left)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Bruce 2(right)") { %>
+                            <option value="Bruce 2(right)" selected>Bruce 2(right)</option>
+                        <% } else { %>
+                        <option value="Bruce 2(right)">Bruce 2(right)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Bruce 3(left)") { %>
+                            <option value="Bruce 3(left)" selected>Bruce 3(left)</option>
+                        <% } else { %>
+                        <option value="Bruce 3(left)">Bruce 3(left)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Bruce 3(right)") { %>
+                            <option value="Bruce 3(right)" selected>Bruce 3(right)</option>
+                        <% } else { %>
+                        <option value="Bruce 3(right)">Bruce 3(right)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Bruce 4(left)") { %>
+                            <option value="Bruce 4(left)" selected>Bruce 4(left)</option>
+                        <% } else { %>
+                        <option value="Bruce 4(left)">Bruce 4(left)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Bruce 4(right)") { %>
+                            <option value="Bruce 4(right)" selected>Bruce 4(right)</option>
+                        <% } else { %>
+                        <option value="Bruce 4(right)">Bruce 4(right)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Bruce 5(left)") { %>
+                            <option value="Bruce 5(left)" selected>Bruce 5(left)</option>
+                        <% } else { %>
+                        <option value="Bruce 5(left)">Bruce 5(left)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Bruce 5(right)") { %>
+                            <option value="Bruce 5(right)" selected>Bruce 5(right)</option>
+                        <% } else { %>
+                        <option value="Bruce 5(right)">Bruce 5(right)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Bruce 6(left)") { %>
+                            <option value="Bruce 6(left)" selected>Bruce 6(left)</option>
+                        <% } else { %>
+                        <option value="Bruce 6(left)">Bruce 6(left)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Bruce 6(right)") { %>
+                            <option value="Bruce 6(right)" selected>Bruce 6(right)</option>
+                        <% } else { %>
+                        <option value="Bruce 6(right)">Bruce 6(right)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Bruce 7(left)") { %>
+                            <option value="Bruce 7(left)" selected>Bruce 7(left)</option>
+                        <% } else { %>
+                        <option value="Bruce 7(left)">Bruce 7(left)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Bruce 7(right)") { %>
+                            <option value="Bruce 7(right)" selected>Bruce 7(right)</option>
+                        <% } else { %>
+                        <option value="Bruce 7(right)">Bruce 7(right)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Bruce 8(left)") { %>
+                            <option value="Bruce 8(left)" selected>Bruce 8(left)</option>
+                        <% } else { %>
+                        <option value="Bruce 8(left)">Bruce 8(left)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Bruce 8(right)") { %>
+                            <option value="Bruce 8(right)" selected>Bruce 8(right)</option>
+                        <% } else { %>
+                        <option value="Bruce 8(right)">Bruce 8(right)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Bruce 9(left)") { %>
+                            <option value="Bruce 9(left)" selected>Bruce 9(left)</option>
+                        <% } else { %>
+                        <option value="Bruce 9(left)">Bruce 9(left)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Bruce 9(right)") { %>
+                            <option value="Bruce 9(right)" selected>Bruce 9(right)</option>
+                        <% } else { %>
+                        <option value="Bruce 9(right)">Bruce 9(right)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Clinebell 1(left)") { %>
+                            <option value="Clinebell 1(left)" selected>Clinebell 1(left)</option>
+                        <% } else { %>
+                        <option value="Clinebell 1(left)">Clinebell 1(left)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Clinebell 1(right)") { %>
+                            <option value="Clinebell 1(right)" selected>Clinebell 1(right)</option>
+                        <% } else { %>
+                        <option value="Clinebell 1(right)">Clinebell 1(right)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Clinebell 2(left)") { %>
+                            <option value="Clinebell 2(left)" selected>Clinebell 2(left)</option>
+                        <% } else { %>
+                        <option value="Clinebell 2(left)">Clinebell 2(left)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Clinebell 2(right)") { %>
+                            <option value="Clinebell 2(right)" selected>Clinebell 2(right)</option>
+                        <% } else { %>
+                        <option value="Clinebell 2(right)">Clinebell 2(right)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Clinebell 3(left)") { %>
+                            <option value="Clinebell 3(left)" selected>Clinebell 3(left)</option>
+                        <% } else { %>
+                        <option value="Clinebell 3(left)">Clinebell 3(left)</option>
+                        <% } %>
+                        <% if(blockPull.machine == "Clinebell 3(right)") { %>
+                            <option value="Clinebell 3(right)" selected>Clinebell 3(right)</option>
+                        <% } else { %>
+                        <option value="Clinebell 3(right)">Clinebell 3(right)</option>
+                        <% } %>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="blockNumber">Block Number</label>
+                    <input rows="1" class="form-control" name="blockNumber" value="<%=blockPull.blockNumber%>"></input>
+                </div>
+                <button type="submit" class="btn btn-primary">Update</button>
+            </div>
+        </form>
+    </main>
+
+    <% include ../static/partials/baseScripts.ejs %>
+
+</body>
+
+</html>

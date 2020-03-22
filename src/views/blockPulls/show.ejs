@@ -9,9 +9,23 @@
     <% include ../static/partials/navbar.ejs %>
 
     <main class="container">
-        <p><%= blockPull.blockNumber %></p>
-        <p><%= blockPull.days %></p>
-        <p><%= blockPull.machine %></p>
+        <a href="/reports/<%= blockPull.reportId %>/blockPulls/<%= blockPull.id %>/edit"
+            class="btn btn-warning">Edit</a>
+        <form style="display:initial" action="/reports/<%= blockPull.reportId %>/blockPulls/<%= blockPull.id %>/destroy"
+            method="post">
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+        <ul class="list-group">
+            <li class="list-group-item">
+                Block number: <%= blockPull.blockNumber %>
+            </li>
+            <li class="list-group-item">
+                Days: <%= blockPull.days %>
+            </li>
+            <li class="list-group-item">
+                Machine: <%= blockPull.machine %>
+            </li>
+        </ul>
     </main>
 
     <% include ../static/partials/baseScripts.ejs %>
