@@ -1,5 +1,6 @@
 const Report = require("./models").Report;
 const BlockPull = require("./models").BlockPull;
+const AmIceInventory = require("./models").AmIceInventory;
 const sequelize = require("../../src/db/models/index").sequelize;
 
 
