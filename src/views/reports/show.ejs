@@ -28,11 +28,13 @@
             </li>
             <% report.blockPulls.forEach((blockPull) => { %>
             <li class="list-group-item">
-                <p>Block Number: <%= blockPull.blockNumber %> days: <%= blockPull.days %> Machine:
+                <a href="/reports/<%= report.id %>/blockPulls/<%= blockPull.id %>">Block Number:
+                    <%= blockPull.blockNumber %> days: <%= blockPull.days %> Machine:
                     <%= blockPull.machine %>
-                </p>
+                </a>
             </li>
             <% }) %>
+
         </ul>
 
     </main>

@@ -25,11 +25,31 @@ module.exports = {
 
     show(req, res, next){
         blockPullQueries.getBlockPull(req.params.id, (err, blockPull) => {
-          if(err || blockPull == null){
-            res.redirect(404, "/");
-          } else {
-            res.render("blockPulls/show", {blockPull});
-          }
+            if(err || blockPull == null){
+                res.redirect(404, "/");
+            } else {
+                res.render("blockPulls/show", {blockPull});
+            }
         });
-      }
+    },
+
+    destroy(req, res, next){
+        blockPullQueries.deleteBlockPull(req.params.id, (err, deleteRecordsCount) => {
+            if(err){
+                res.redirect(500, `/reports/${req.params.reportId}/blockPulls/${req.params.id}`)
+            } else {
+                res.redirect(303, `/reports/${req.params.reportId}`)
+            }
+        })
+    },
+
+    edit(req, res, next){
+        blockPullQueries.getBlockPull(req.params.id, (err, blockPull) => {
+            if(err || blockPull == null){
+                res.redirect(404, "/");
+            } else {
+                res.render("blockPulls/edit", {blockPull});
+            }
+        });
+    }
 };

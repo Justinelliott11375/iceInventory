@@ -19,10 +19,23 @@ module.exports = {
     getBlockPull(id, callback){
         return BlockPull.findByPk(id)
         .then((blockPull) => {
-          callback(null, blockPull);
+            callback(null, blockPull);
         })
         .catch((err) => {
-          callback(err);
+            callback(err);
         })
-      }
+    },
+
+    deleteBlockPull(id, callback){
+        return BlockPull.destroy({
+            where: { id }
+        })
+        .then((deleteRecordsCount) => {
+            callback(null, deleteRecordsCount);
+        })
+        .catch((err) => {
+            console.log(err);
+            callback(err);
+        })
+    }
 }
