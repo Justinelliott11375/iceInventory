@@ -37,5 +37,23 @@ module.exports = {
             console.log(err);
             callback(err);
         })
+    },
+
+    updateBlockPull(id, updatedBlockPull, callback){
+        return BlockPull.findByPk(id)
+        .then((blockPull) => {
+            if(!blockPull){
+                return callback("Block Pull Record not found");
+            }
+            blockPull.update(updatedBlockPull, {
+                fields: Object.keys(updatedBlockPull)
+            })
+            .then(() => {
+                callback(null, blockPull);
+            })
+            .catch((err) => {
+                callback(err);
+            });
+        });
     }
 }

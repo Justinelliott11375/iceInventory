@@ -51,5 +51,15 @@ module.exports = {
                 res.render("blockPulls/edit", {blockPull});
             }
         });
-    }
+    },
+
+    update(req, res, next){
+        blockPullQueries.updateBlockPull(req.params.id, req.body, (err, blockPull) => {
+          if(err || blockPull == null){
+            res.redirect(404, `/reports/${req.params.reportId}/blockPulls/${req.params.id}/edit`);
+          } else {
+            res.redirect(`/reports/${req.params.reportId}/blockPulls/${req.params.id}`);
+          }
+        });
+      }
 };
