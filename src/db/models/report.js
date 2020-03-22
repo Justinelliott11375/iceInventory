@@ -12,6 +12,11 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: "reportId",
       as: "blockPulls",
     });
+
+    Report.hasMany(models.AmIceInventory, {
+      foreignKey: "reportId",
+      as: "amIceInventories",
+    })
   };
   return Report;
 };
