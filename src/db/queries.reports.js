@@ -1,10 +1,15 @@
 const Report = require("./models").Report;
 const BlockPull = require("./models").BlockPull;
+const sequelize = require("../../src/db/models/index").sequelize;
 
 
 module.exports = {
     getAllReports(callback){
-        return Report.findAll()
+        return Report.findAll({
+            order: [
+                ['date', 'DESC'],
+            ]
+        })
 
         .then((reports) => {
             callback(null, reports);
