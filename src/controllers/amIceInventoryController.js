@@ -20,5 +20,15 @@ module.exports = {
                 res.redirect(303, `/reports/${newAmIceInventory.reportId}`)
             }
         });
+    },
+
+    derstroy(req, res, next){
+        amIceInventoryQueries.deleteAmIceInventory(req.params.id, (err, deletedRecordsCount) => {
+            if(err){
+                res.redirect(500, `/reports/${req.params.reportId}/amIceInventories/new`)
+            } else {
+                res.redirect(500, `/reports/${req.params.reportdId}`)
+            }
+        });
     }
 }
