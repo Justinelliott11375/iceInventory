@@ -1,0 +1,94 @@
+Date : 2020-03-24 09:17:53
+Directory : /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory
+Total : 46 files,  4110 codes, 35 comments, 228 blanks, all 4373 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JSON       |          4 |      2,464 |          2 |          1 |      2,467 |
+| JavaScript |         27 |      1,035 |         29 |        152 |      1,216 |
+| HTML       |         14 |        608 |          4 |         75 |        687 |
+| CSS        |          1 |          3 |          0 |          0 |          3 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                            | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                               |         46 |      4,110 |         35 |        228 |      4,373 |
+| spec                                                                                                                            |          5 |        298 |          4 |         65 |        367 |
+| spec/integration                                                                                                                |          3 |        201 |          0 |         44 |        245 |
+| spec/support                                                                                                                    |          1 |          9 |          2 |          0 |         11 |
+| spec/unit                                                                                                                       |          1 |         88 |          2 |         21 |        111 |
+| src                                                                                                                             |         39 |      1,387 |         31 |        162 |      1,580 |
+| src/assets                                                                                                                      |          1 |          3 |          0 |          0 |          3 |
+| src/assets/css                                                                                                                  |          1 |          3 |          0 |          0 |          3 |
+| src/config                                                                                                                      |          2 |         24 |          0 |          4 |         28 |
+| src/controllers                                                                                                                 |          4 |        212 |          4 |         21 |        237 |
+| src/db                                                                                                                          |         12 |        475 |         23 |         38 |        536 |
+| src/db/config                                                                                                                   |          1 |         30 |          0 |          0 |         30 |
+| src/db/migrations                                                                                                               |          3 |        121 |          0 |          1 |        122 |
+| src/db/models                                                                                                                   |          4 |        106 |          3 |         10 |        119 |
+| src/db/seeds                                                                                                                    |          1 |         23 |         17 |          6 |         46 |
+| src/routes                                                                                                                      |          4 |         37 |          0 |         14 |         51 |
+| src/views                                                                                                                       |         14 |        608 |          4 |         75 |        687 |
+| src/views/amIceInventories                                                                                                      |          3 |        113 |          0 |         19 |        132 |
+| src/views/blockPulls                                                                                                            |          3 |        330 |          1 |         20 |        351 |
+| src/views/reports                                                                                                               |          4 |        121 |          0 |         29 |        150 |
+| src/views/static                                                                                                                |          4 |         44 |          3 |          7 |         54 |
+| src/views/static/partials                                                                                                       |          3 |         29 |          0 |          0 |         29 |
++---------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                                        | language   | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/package-lock.json                                           | JSON       |      2,390 |          0 |          0 |      2,390 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/package.json                                                | JSON       |         35 |          0 |          1 |         36 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/spec/integration/blockPulls_spec.js                         | JavaScript |         64 |          0 |         14 |         78 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/spec/integration/reports_spec.js                            | JavaScript |        123 |          0 |         24 |        147 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/spec/integration/static_spec.js                             | JavaScript |         14 |          0 |          6 |         20 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/spec/support/jasmine.json                                   | JSON       |          9 |          2 |          0 |         11 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/spec/unit/blockPull_spec.js                                 | JavaScript |         88 |          2 |         21 |        111 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/app.js                                                  | JavaScript |          7 |          0 |          4 |         11 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/assets/css/application.css                              | CSS        |          3 |          0 |          0 |          3 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/config/main-config.js                                   | JavaScript |         12 |          0 |          2 |         14 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/config/route-config.js                                  | JavaScript |         12 |          0 |          2 |         14 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/controllers/amIceInventoryController.js                 | JavaScript |         61 |          0 |          7 |         68 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/controllers/blockPullController.js                      | JavaScript |         78 |          4 |          6 |         88 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/controllers/reportController.js                         | JavaScript |         68 |          0 |          8 |         76 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/controllers/staticController.js                         | JavaScript |          5 |          0 |          0 |          5 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/db/config/config.json                                   | JSON       |         30 |          0 |          0 |         30 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/db/migrations/20200217064130-create-report.js           | JavaScript |         29 |          0 |          1 |         30 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/db/migrations/20200217064520-create-block-pull.js       | JavaScript |         46 |          0 |          0 |         46 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/db/migrations/20200322190722-create-am-ice-inventory.js | JavaScript |         46 |          0 |          0 |         46 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/db/models/Amiceinventory.js                             | JavaScript |         28 |          1 |          2 |         31 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/db/models/blockpull.js                                  | JavaScript |         28 |          1 |          0 |         29 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/db/models/index.js                                      | JavaScript |         30 |          0 |          7 |         37 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/db/models/report.js                                     | JavaScript |         20 |          1 |          1 |         22 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/db/queries.amIceInventories.js                          | JavaScript |         51 |          0 |          7 |         58 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/db/queries.blockPulls.js                                | JavaScript |         63 |          3 |          6 |         72 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/db/queries.reports.js                                   | JavaScript |         81 |          0 |          8 |         89 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/db/seeds/20200222083030-reports.js                      | JavaScript |         23 |         17 |          6 |         46 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/routes/amIceInventories.js                              | JavaScript |         10 |          0 |          5 |         15 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/routes/blockPulls.js                                    | JavaScript |         11 |          0 |          3 |         14 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/routes/reports.js                                       | JavaScript |         11 |          0 |          3 |         14 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/routes/static.js                                        | JavaScript |          5 |          0 |          3 |          8 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/server.js                                               | JavaScript |         21 |          0 |          6 |         27 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/views/amIceInventories/edit.ejs                         | HTML       |         47 |          0 |          7 |         54 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/views/amIceInventories/new.ejs                          | HTML       |         39 |          0 |          6 |         45 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/views/amIceInventories/show.ejs                         | HTML       |         27 |          0 |          6 |         33 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/views/blockPulls/edit.ejs                               | HTML       |        174 |          1 |          8 |        183 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/views/blockPulls/new.ejs                                | HTML       |        126 |          0 |          6 |        132 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/views/blockPulls/show.ejs                               | HTML       |         30 |          0 |          6 |         36 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/views/reports/edit.ejs                                  | HTML       |         34 |          0 |          6 |         40 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/views/reports/index.ejs                                 | HTML       |         20 |          0 |          6 |         26 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/views/reports/new.ejs                                   | HTML       |         20 |          0 |          9 |         29 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/views/reports/show.ejs                                  | HTML       |         47 |          0 |          8 |         55 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/views/static/index.ejs                                  | HTML       |         15 |          3 |          7 |         25 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/views/static/partials/baseScripts.ejs                   | HTML       |          4 |          0 |          0 |          4 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/views/static/partials/head.ejs                          | HTML       |          6 |          0 |          0 |          6 |
+| /Users/justinelliott/Documents/portfolioProjects/iceCount/inventory/src/views/static/partials/navbar.ejs                        | HTML       |         19 |          0 |          0 |         19 |
+| Total                                                                                                                           |            |      4,110 |         35 |        228 |      4,373 |
++---------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

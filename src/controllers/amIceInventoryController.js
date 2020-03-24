@@ -22,13 +22,47 @@ module.exports = {
         });
     },
 
-    derstroy(req, res, next){
-        amIceInventoryQueries.deleteAmIceInventory(req.params.id, (err, deletedRecordsCount) => {
+    show(req, res, next){
+        console.log("amIceInv show called");
+        amIceInventoryQueries.getAmIceInventory(req.params.id, (err, amIceInventory) => {
+            if(err || amIceInventory == null){
+                res.redirect(404, "/");
+            } else {
+                res.render("amIceInventories/show", {amIceInventory});
+            }
+        });
+    },
+
+    destroy(req, res, next){
+        console.log("amIceInv destroy called");
+        amIceInventoryQueries.deleteAmIceInventory(req.params.id, (err, deleteRecordsCount) => {
             if(err){
                 res.redirect(500, `/reports/${req.params.reportId}/amIceInventories/new`)
             } else {
-                res.redirect(500, `/reports/${req.params.reportdId}`)
+                res.redirect(303, `/reports/${req.params.reportId}`)
             }
         });
-    }
+    },
+
+    edit(req, res, next){
+        amIceInventoryQueries.getAmIceInventory(req.params.id, (err, amIceInventory) => {
+            if(err || amIceInventory == null){
+                res.redirect(404, "/");
+            } else {
+                res.render("amIceInventories/edit", {amIceInventory});
+            }
+        });
+    },
+
+    update(req, res, next){
+        amIceInventoryQueries.updateAmIceInventory(req.params.id, req.body, (err, amIceInventory) => {
+            console.log("AmIceInv update called");
+          if(err || amIceInventory == null){
+            res.redirect(404, `/reports/${req.params.reportId}/amIceInventories/${req.params.id}/edit`);
+          } else {
+            res.redirect(`/reports/${req.params.reportId}`);
+          }
+        });
+      }
+
 }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../static/partials/head.ejs %>
+</head>
+
+<body>
+    <% include ../static/partials/navbar.ejs %>
+
+    <main class="container">
+
+        <h1>Edit Inventory</h1>
+        <a href="/reports/<%= amIceInventory.reportId %>" class="btn btn-success">Back to Report</a>
+        <form action="/reports/<%= amIceInventory.reportId %>/amIceInventories/<%= amIceInventory.id %>/update"
+            method="post" autocomplete="off">
+            <div class="row">
+                <div class="col">
+                    <label for="newAmIceInventoryAmount">Number</label>
+                    <input type="number" rows="1" class="form-control" name="amount"
+                        value="<%= amIceInventory.amount %>"></input>
+                </div>
+                <div class="col">
+                    <label for="unit">Unit</label>
+                    <select class="form-control" name="unit" id="newAmIceInventoryUnit">
+                        <% if(amIceInventory.unit == "pc"){ %>
+                        <option value="bag">bag</option>
+                        <option value="pc" selected>pc</option>
+                        <% } else { %>
+                        <option value="bag" selected>bag</option>
+                        <option value="pc">pc</option>
+                        <% } %>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="product">Product</label>
+                    <select class="form-control" name="product" id="newAmIceInventoryProduct">
+                        <option value="2 inch">2 inch</option>
+                        <option value="Sambuca">Sambuca</option>
+                        <option value="Shake">Shake</option>
+                        <option value="Collins">Collins</option>
+                        <option value="RPB Slabs">RPB Slabs</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <% include ../static/partials/baseScripts.ejs %>
+
+</body>
+
+</html>
