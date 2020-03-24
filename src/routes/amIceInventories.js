@@ -5,6 +5,10 @@ const amIceInventoryController = require("../controllers/amIceInventoryControlle
 
 router.get("/reports/:reportId/amIceInventories/new", amIceInventoryController.new);
 router.post("/reports/:reportId/amIceInventories/create", amIceInventoryController.create);
-//router.post("/reports/:reportId/amIceInventories/:id/destroy", amIceInventoryController.destroy);
+router.get("/reports/:reportId/amIceInventories/:id/show", amIceInventoryController.show);
+router.post("/reports/:reportId/amIceInventories/:id/destroy", amIceInventoryController.destroy);
+router.get("/reports/:reportId/amIceInventories/:id/edit", amIceInventoryController.edit);
+router.post("/reports/:reportId/amIceInventories/:id/update", amIceInventoryController.update);
+
 
 module.exports = router;

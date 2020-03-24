@@ -16,10 +16,10 @@
             <button type="submit" class="btn btn-danger">Delete</button>
         </form>
         <h1>AM Ice Inventory</h1>
-        <a href="/reports/<%= report.id %>/amIceInventories/new" class="btn btn-success">New/Edit</a>
+        <a href="/reports/<%= report.id %>/amIceInventories/new" class="btn btn-success">New Inventory</a>
         <% report.amIceInventories.forEach((amIceInventory) => { %>
         <li class="list-group-item">
-            <a href="/reports/<%= report.id %>/amIceInventories/<%= amIceInventory.id %>">
+            <a href="/reports/<%= report.id %>/amIceInventories/<%= amIceInventory.id %>/show">
                 <%= amIceInventory.amount %> <%= amIceInventory.unit %>
                 <%= amIceInventory.product %>
             </a>
