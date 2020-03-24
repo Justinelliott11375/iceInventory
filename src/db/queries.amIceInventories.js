@@ -12,6 +12,18 @@ module.exports = {
             console.log(err);
             callback(err);
         })
+    },
+
+    deleteAmIceInventory(id, callback){
+        return AmIceInventory.destroy({
+            where: { id }
+        })
+        .then((deletedRecordsCount) => {
+            callback(null, deletedRecordsCount);
+        })
+        .catch((err) => {
+            callback(err);
+        })
     }
 
 }

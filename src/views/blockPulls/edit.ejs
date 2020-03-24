@@ -12,7 +12,8 @@
 
         <h1>Edit Post</h1>
 
-        <form action="/reports/<%= blockPull.reportId %>/blockPulls/<%= blockPull.id %>/update" method="post">
+        <form action="/reports/<%= blockPull.reportId %>/blockPulls/<%= blockPull.id %>/update" method="post"
+            autocomplete="off">
             <div class="form-group">
                 <div class="form-group">
                     <label for="days">Block Days</label>
@@ -45,122 +46,122 @@
                     <select id="newBlockPullMachine" name="machine">
                         <!-- if/else statements render current machine as "selected" -->
                         <% if(blockPull.machine == "Bruce 1(left)") { %>
-                            <option value="Bruce 1(left)" selected>Bruce 1(left)</option>
+                        <option value="Bruce 1(left)" selected>Bruce 1(left)</option>
                         <% } else { %>
                         <option value="Bruce 1(left)">Bruce 1(left)</option>
                         <% } %>
                         <% if(blockPull.machine == "Bruce 1(right)") { %>
-                            <option value="Bruce 1(right)" selected>Bruce 1(right)</option>
+                        <option value="Bruce 1(right)" selected>Bruce 1(right)</option>
                         <% } else { %>
                         <option value="Bruce 1(right)">Bruce 1(right)</option>
                         <% } %>
                         <% if(blockPull.machine == "Bruce 2(left)") { %>
-                            <option value="Bruce 2(left)" selected>Bruce 2(left)</option>
+                        <option value="Bruce 2(left)" selected>Bruce 2(left)</option>
                         <% } else { %>
                         <option value="Bruce 2(left)">Bruce 2(left)</option>
                         <% } %>
                         <% if(blockPull.machine == "Bruce 2(right)") { %>
-                            <option value="Bruce 2(right)" selected>Bruce 2(right)</option>
+                        <option value="Bruce 2(right)" selected>Bruce 2(right)</option>
                         <% } else { %>
                         <option value="Bruce 2(right)">Bruce 2(right)</option>
                         <% } %>
                         <% if(blockPull.machine == "Bruce 3(left)") { %>
-                            <option value="Bruce 3(left)" selected>Bruce 3(left)</option>
+                        <option value="Bruce 3(left)" selected>Bruce 3(left)</option>
                         <% } else { %>
                         <option value="Bruce 3(left)">Bruce 3(left)</option>
                         <% } %>
                         <% if(blockPull.machine == "Bruce 3(right)") { %>
-                            <option value="Bruce 3(right)" selected>Bruce 3(right)</option>
+                        <option value="Bruce 3(right)" selected>Bruce 3(right)</option>
                         <% } else { %>
                         <option value="Bruce 3(right)">Bruce 3(right)</option>
                         <% } %>
                         <% if(blockPull.machine == "Bruce 4(left)") { %>
-                            <option value="Bruce 4(left)" selected>Bruce 4(left)</option>
+                        <option value="Bruce 4(left)" selected>Bruce 4(left)</option>
                         <% } else { %>
                         <option value="Bruce 4(left)">Bruce 4(left)</option>
                         <% } %>
                         <% if(blockPull.machine == "Bruce 4(right)") { %>
-                            <option value="Bruce 4(right)" selected>Bruce 4(right)</option>
+                        <option value="Bruce 4(right)" selected>Bruce 4(right)</option>
                         <% } else { %>
                         <option value="Bruce 4(right)">Bruce 4(right)</option>
                         <% } %>
                         <% if(blockPull.machine == "Bruce 5(left)") { %>
-                            <option value="Bruce 5(left)" selected>Bruce 5(left)</option>
+                        <option value="Bruce 5(left)" selected>Bruce 5(left)</option>
                         <% } else { %>
                         <option value="Bruce 5(left)">Bruce 5(left)</option>
                         <% } %>
                         <% if(blockPull.machine == "Bruce 5(right)") { %>
-                            <option value="Bruce 5(right)" selected>Bruce 5(right)</option>
+                        <option value="Bruce 5(right)" selected>Bruce 5(right)</option>
                         <% } else { %>
                         <option value="Bruce 5(right)">Bruce 5(right)</option>
                         <% } %>
                         <% if(blockPull.machine == "Bruce 6(left)") { %>
-                            <option value="Bruce 6(left)" selected>Bruce 6(left)</option>
+                        <option value="Bruce 6(left)" selected>Bruce 6(left)</option>
                         <% } else { %>
                         <option value="Bruce 6(left)">Bruce 6(left)</option>
                         <% } %>
                         <% if(blockPull.machine == "Bruce 6(right)") { %>
-                            <option value="Bruce 6(right)" selected>Bruce 6(right)</option>
+                        <option value="Bruce 6(right)" selected>Bruce 6(right)</option>
                         <% } else { %>
                         <option value="Bruce 6(right)">Bruce 6(right)</option>
                         <% } %>
                         <% if(blockPull.machine == "Bruce 7(left)") { %>
-                            <option value="Bruce 7(left)" selected>Bruce 7(left)</option>
+                        <option value="Bruce 7(left)" selected>Bruce 7(left)</option>
                         <% } else { %>
                         <option value="Bruce 7(left)">Bruce 7(left)</option>
                         <% } %>
                         <% if(blockPull.machine == "Bruce 7(right)") { %>
-                            <option value="Bruce 7(right)" selected>Bruce 7(right)</option>
+                        <option value="Bruce 7(right)" selected>Bruce 7(right)</option>
                         <% } else { %>
                         <option value="Bruce 7(right)">Bruce 7(right)</option>
                         <% } %>
                         <% if(blockPull.machine == "Bruce 8(left)") { %>
-                            <option value="Bruce 8(left)" selected>Bruce 8(left)</option>
+                        <option value="Bruce 8(left)" selected>Bruce 8(left)</option>
                         <% } else { %>
                         <option value="Bruce 8(left)">Bruce 8(left)</option>
                         <% } %>
                         <% if(blockPull.machine == "Bruce 8(right)") { %>
-                            <option value="Bruce 8(right)" selected>Bruce 8(right)</option>
+                        <option value="Bruce 8(right)" selected>Bruce 8(right)</option>
                         <% } else { %>
                         <option value="Bruce 8(right)">Bruce 8(right)</option>
                         <% } %>
                         <% if(blockPull.machine == "Bruce 9(left)") { %>
-                            <option value="Bruce 9(left)" selected>Bruce 9(left)</option>
+                        <option value="Bruce 9(left)" selected>Bruce 9(left)</option>
                         <% } else { %>
                         <option value="Bruce 9(left)">Bruce 9(left)</option>
                         <% } %>
                         <% if(blockPull.machine == "Bruce 9(right)") { %>
-                            <option value="Bruce 9(right)" selected>Bruce 9(right)</option>
+                        <option value="Bruce 9(right)" selected>Bruce 9(right)</option>
                         <% } else { %>
                         <option value="Bruce 9(right)">Bruce 9(right)</option>
                         <% } %>
                         <% if(blockPull.machine == "Clinebell 1(left)") { %>
-                            <option value="Clinebell 1(left)" selected>Clinebell 1(left)</option>
+                        <option value="Clinebell 1(left)" selected>Clinebell 1(left)</option>
                         <% } else { %>
                         <option value="Clinebell 1(left)">Clinebell 1(left)</option>
                         <% } %>
                         <% if(blockPull.machine == "Clinebell 1(right)") { %>
-                            <option value="Clinebell 1(right)" selected>Clinebell 1(right)</option>
+                        <option value="Clinebell 1(right)" selected>Clinebell 1(right)</option>
                         <% } else { %>
                         <option value="Clinebell 1(right)">Clinebell 1(right)</option>
                         <% } %>
                         <% if(blockPull.machine == "Clinebell 2(left)") { %>
-                            <option value="Clinebell 2(left)" selected>Clinebell 2(left)</option>
+                        <option value="Clinebell 2(left)" selected>Clinebell 2(left)</option>
                         <% } else { %>
                         <option value="Clinebell 2(left)">Clinebell 2(left)</option>
                         <% } %>
                         <% if(blockPull.machine == "Clinebell 2(right)") { %>
-                            <option value="Clinebell 2(right)" selected>Clinebell 2(right)</option>
+                        <option value="Clinebell 2(right)" selected>Clinebell 2(right)</option>
                         <% } else { %>
                         <option value="Clinebell 2(right)">Clinebell 2(right)</option>
                         <% } %>
                         <% if(blockPull.machine == "Clinebell 3(left)") { %>
-                            <option value="Clinebell 3(left)" selected>Clinebell 3(left)</option>
+                        <option value="Clinebell 3(left)" selected>Clinebell 3(left)</option>
                         <% } else { %>
                         <option value="Clinebell 3(left)">Clinebell 3(left)</option>
                         <% } %>
                         <% if(blockPull.machine == "Clinebell 3(right)") { %>
-                            <option value="Clinebell 3(right)" selected>Clinebell 3(right)</option>
+                        <option value="Clinebell 3(right)" selected>Clinebell 3(right)</option>
                         <% } else { %>
                         <option value="Clinebell 3(right)">Clinebell 3(right)</option>
                         <% } %>
