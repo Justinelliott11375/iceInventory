@@ -36,10 +36,16 @@ module.exports = {
 
     getReport(id, callback){
         return Report.findByPk(id, {
-            include: [{
-                model: BlockPull,
-                as: "blockPulls"
-            }]
+            include: [
+                {
+                    model: BlockPull,
+                    as: "blockPulls"
+                },
+                {
+                    model: AmIceInventory,
+                    as: "amIceInventories"
+                }
+            ]
         })
 
         .then((report) => {
