@@ -3,7 +3,7 @@ const BlockPull = require("./models").BlockPull;
 
 module.exports = {
     
-    addBlockPull(newBlockPull, callback){
+    addSingleBlockPull(newBlockPull, callback){
         //console.log(newBlockPull);
         console.log("addBlockPull called");
         return BlockPull.create(newBlockPull)
@@ -12,6 +12,19 @@ module.exports = {
         })
         .catch((err) => {
             //console.log(err);
+            callback(err);
+        })
+    },
+
+    addFullBlockPull(newBlockPullOne, newBlockPullTwo, callback){
+        //console.log(newBlockPull);
+        console.log("addFullBlockPull called");
+        return BlockPull.bulkCreate([newBlockPullOne, newBlockPullTwo])
+        .then((blockPulls) => {
+            callback(null, blockPulls);
+        })
+        .catch((err) => {
+            console.log(err);
             callback(err);
         })
     },

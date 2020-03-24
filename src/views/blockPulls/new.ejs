@@ -10,51 +10,119 @@
 
   <main class="container">
     <h1>New Block Pull</h1>
-    <form action="/reports/<%= reportId %>/blockPulls/create" method="post" autocomplete="off">
-      <div class="form-group">
-        <label for="days">Block Days</label>
-        <select id="newBlockPullDays" name="days">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-        </select>
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header" id="fullMachineHeading">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#fullMachineForm" aria-expanded="false"
+              aria-controls="fullMachineForm">
+              New Full Machine Pull
+            </button>
+          </h5>
+        </div>
+
+        <div id="fullMachineForm" class="collapse show" aria-labelledby="fullMachineHeading" data-parent="#accordion">
+          <div class="card-body">
+            <form id="fullMachineForm" action="/reports/<%= reportId %>/blockPulls/createFull" method="post"
+              autocomplete="off">
+              <div class="form-group">
+                <label for="days">Block Days</label>
+                <select id="newBlockPullDays" name="days">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="machine">Machine</label>
+                <select id="newBlockPullMachine" name="machine">
+                  <option value="Bruce 1">Bruce 1</option>
+                  <option value="Bruce 2">Bruce 2</option>
+                  <option value="Bruce 3">Bruce 3</option>
+                  <option value="Bruce 4">Bruce 4</option>
+                  <option value="Bruce 5">Bruce 5</option>
+                  <option value="Bruce 6">Bruce 6</option>
+                  <option value="Bruce 7">Bruce 7</option>
+                  <option value="Bruce 8">Bruce 8</option>
+                  <option value="Bruce 9">Bruce 9</option>
+                  <option value="Clinebell 1">Clinebell 1</option>
+                  <option value="Clinebell 2">Clinebell 2</option>
+                  <option value="Clinebell 3">Clinebell 3</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="blockNumber">Block Number</label>
+                <small>(Do not include letters for left and right)</small>
+                <input rows="1" class="form-control" name="blockNumber" placeholder="Enter block number"></input>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="machine">Machine</label>
-        <select id="newBlockPullMachine" name="machine">
-          <option value="Bruce 1(left)">Bruce 1(left)</option>
-          <option value="Bruce 1(right)">Bruce 1(right)</option>
-          <option value="Bruce 2(left)">Bruce 2(left)</option>
-          <option value="Bruce 2(right)">Bruce 2(right)</option>
-          <option value="Bruce 3(left)">Bruce 3(left)</option>
-          <option value="Bruce 3(right)">Bruce 3(right)</option>
-          <option value="Bruce 4(left)">Bruce 4(left)</option>
-          <option value="Bruce 4(right)">Bruce 4(right)</option>
-          <option value="Bruce 5(left)">Bruce 5(left)</option>
-          <option value="Bruce 5(right)">Bruce 5(right)</option>
-          <option value="Bruce 6(left)">Bruce 6(left)</option>
-          <option value="Bruce 6(right)">Bruce 6(right)</option>
-          <option value="Bruce 7(left)">Bruce 7(left)</option>
-          <option value="Bruce 7(right)">Bruce 7(right)</option>
-          <option value="Bruce 8(left)">Bruce 8(left)</option>
-          <option value="Bruce 8(right)">Bruce 8(right)</option>
-          <option value="Bruce 9(left)">Bruce 9(left)</option>
-          <option value="Bruce 9(right)">Bruce 9(right)</option>
-          <option value="Clinebell 1(left)">Clinebell 1(left)</option>
-          <option value="Clinebell 1(right)">Clinebell 1(right)</option>
-          <option value="Clinebell 2(left)">Clinebell 2(left)</option>
-          <option value="Clinebell 2(right)">Clinebell 2(right)</option>
-          <option value="Clinebell 3(left)">Clinebell 3(left)</option>
-          <option value="Clinebell 3(right)">Clinebell 3(right)</option>
-        </select>
+      <div class="card">
+        <div class="card-header" id="singleBlockHeading">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#singleBlockForm"
+              aria-expanded="false" aria-controls="singleBlockForm">
+              New Single Block Pull
+            </button>
+          </h5>
+        </div>
+        <div id="singleBlockForm" class="collapse" aria-labelledby="singleBlockHeading" data-parent="#accordion">
+          <div class="card-body">
+            <form id="singleBlockForm" action="/reports/<%= reportId %>/blockPulls/createSingle" method="post"
+              autocomplete="off">
+              <div class="form-group">
+                <label for="days">Block Days</label>
+                <select id="newBlockPullDays" name="days">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="machine">Machine</label>
+                <select id="newBlockPullMachine" name="machine">
+                  <option value="Bruce 1(left)">Bruce 1(left)</option>
+                  <option value="Bruce 1(right)">Bruce 1(right)</option>
+                  <option value="Bruce 2(left)">Bruce 2(left)</option>
+                  <option value="Bruce 2(right)">Bruce 2(right)</option>
+                  <option value="Bruce 3(left)">Bruce 3(left)</option>
+                  <option value="Bruce 3(right)">Bruce 3(right)</option>
+                  <option value="Bruce 4(left)">Bruce 4(left)</option>
+                  <option value="Bruce 4(right)">Bruce 4(right)</option>
+                  <option value="Bruce 5(left)">Bruce 5(left)</option>
+                  <option value="Bruce 5(right)">Bruce 5(right)</option>
+                  <option value="Bruce 6(left)">Bruce 6(left)</option>
+                  <option value="Bruce 6(right)">Bruce 6(right)</option>
+                  <option value="Bruce 7(left)">Bruce 7(left)</option>
+                  <option value="Bruce 7(right)">Bruce 7(right)</option>
+                  <option value="Bruce 8(left)">Bruce 8(left)</option>
+                  <option value="Bruce 8(right)">Bruce 8(right)</option>
+                  <option value="Bruce 9(left)">Bruce 9(left)</option>
+                  <option value="Bruce 9(right)">Bruce 9(right)</option>
+                  <option value="Clinebell 1(left)">Clinebell 1(left)</option>
+                  <option value="Clinebell 1(right)">Clinebell 1(right)</option>
+                  <option value="Clinebell 2(left)">Clinebell 2(left)</option>
+                  <option value="Clinebell 2(right)">Clinebell 2(right)</option>
+                  <option value="Clinebell 3(left)">Clinebell 3(left)</option>
+                  <option value="Clinebell 3(right)">Clinebell 3(right)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="blockNumber">Block Number</label>
+                <small>(Include letter A or B for left or right)</small>
+                <input rows="1" class="form-control" name="blockNumber" placeholder="Enter block number"></input>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="blockNumber">Block Number</label>
-        <input rows="1" class="form-control" name="blockNumber" placeholder="Enter block number"></input>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    </div>
   </main>
 
   <% include ../static/partials/baseScripts.ejs %>
