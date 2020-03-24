@@ -15,6 +15,16 @@
         <form style="display:initial" action="/reports/<%= report.id %>/destroy" method="post">
             <button type="submit" class="btn btn-danger">Delete</button>
         </form>
+        <h1>AM Ice Inventory</h1>
+        <a href="/reports/<%= report.id %>/amIceInventories/new" class="btn btn-success">New/Edit</a>
+        <% report.amIceInventories.forEach((amIceInventory) => { %>
+        <li class="list-group-item">
+            <a href="/reports/<%= report.id %>/amIceInventories/<%= amIceInventory.id %>">
+                <%= amIceInventory.amount %> <%= amIceInventory.unit %>
+                <%= amIceInventory.product %>
+            </a>
+        </li>
+        <% }) %>
         <h1>Blocks Pulled</h1>
         <a href="/reports/<%= report.id %>/blockPulls/new" class="btn btn-success">New Block Pull</a>
         <ul class="list-group">
