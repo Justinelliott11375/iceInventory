@@ -7,10 +7,15 @@ module.exports = {
 
     create(req, res, next){
         console.log("amIceInv create called");
+        if(req.body.product == "Other"){
+            var productName = req.body.customField;
+        } else {
+            var productName = req.body.product
+        }
         let newAmIceInventory = {
             amount: req.body.amount,
             unit: req.body.unit,
-            product: req.body.product,
+            product: productName,
             reportId: req.params.reportId
         };
         amIceInventoryQueries.addAmIceInventory(newAmIceInventory, (err, amIceInventory) => {

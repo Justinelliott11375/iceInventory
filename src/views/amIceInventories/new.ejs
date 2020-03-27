@@ -3,9 +3,19 @@
 
 <head>
     <% include ../static/partials/head.ejs %>
+    <script type="text/javascript">
+        function showCustomField(name) {
+            if (name == 'Other') document.getElementById('customField').style.display = "block";
+            else document.getElementById('customField').style.display = "none";
+        }
+
+        function hideCustomField() {
+            document.getElementById('customField').style.display = 'none';
+        }
+    </script>
 </head>
 
-<body>
+<body onload="hideCustomField()">
     <% include ../static/partials/navbar.ejs %>
 
     <main class="container">
@@ -22,17 +32,29 @@
                         <option value="bag" selected>bag</option>
                         <option value="pc">pc</option>
                     </select>
+
                 </div>
                 <div class="col">
                     <label for="product">Product</label>
-                    <select class="form-control" name="product" id="newAmIceInventoryProduct">
+                    <select class="form-control" name="product" id="newAmIceInventoryProduct"
+                        onchange="showCustomField(this.options[this.selectedIndex].value)">
                         <option value="2 inch">2 inch</option>
                         <option value="Sambuca">Sambuca</option>
                         <option value="Shake">Shake</option>
                         <option value="Collins">Collins</option>
+                        <option value="Atta Slabs">Atta Slabs</option>
                         <option value="RPB Slabs">RPB Slabs</option>
+                        <option value="Other">Other</option>
                     </select>
+
                     <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <div class="col">
+                    <div id="customField">
+                        <label for="customInput">If Other: </label>
+                        <input type="text" rows="1" class="form-control" placeholder="enter product name"
+                            name="customField" />
+                    </div>
                 </div>
             </div>
         </form>
